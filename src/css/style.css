@@ -1,0 +1,35 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+#brandLogo{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+#brandLogo img{
+    height: 50px;
+    width: auto;
+}
+
+#brandLogo span{
+    margin-left: 10px;
+    font-size: large;
+    font-weight: bold;
+}
+
+#menuList{
+    margin-right: 20px;
+}
+
+#menuList ul{
+    list-style: none;
+    display: inline-flex;
+}
+
+#menuList ul li{
+    margin-left: 30px;
+    font-size: large;
+}
