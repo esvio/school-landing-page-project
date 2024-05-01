@@ -29,7 +29,37 @@
     </nav>
 
     <header>
+        <div class="slideshow-container">
 
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="./resources/images/image1.jpg" class="slideshow-image">
+                <div class="text">Classroom</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="./resources/images/image2.jpg" class="slideshow-image">
+                <div class="text">Graduation</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./resources/images/image3.jpg" class="slideshow-image">
+                <div class="text">Lesson</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
     </header>
 
     <section>
@@ -39,6 +69,7 @@
     <footer>
 
     </footer>
+    <script src="./src/js/index.js"></script>
 </body>
 
 </html>
