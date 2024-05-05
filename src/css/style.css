@@ -155,3 +155,36 @@ body {
         font-size: 11px
     }
 }
+
+.card {
+    width: 25%;
+    box-shadow: 3px 5px lightslategray;
+}
+
+.card_image {
+    background-image: url("../../resources/images/image3.jpg");
+    background-size: cover;
+    height: 200px;
+}
+
+
+.card_body .card_text-date {
+    display: flex;
+    justify-content: end;
+    font-size: 11px;
+    color: grey;
+}
+
+.card_footer {
+    display: flex;
+    justify-content: end;
+}
+
+.card_button {
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    border-style: none;
+    padding: 10px;
+    font-weight: bold;
+}
