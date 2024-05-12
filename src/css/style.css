@@ -202,7 +202,16 @@ body {
 #section-facilities{
     background-color: #F0F0F0;
     margin-top: 2%;
-    height: 300px;
+}
+
+.facilities{
+    width: 20%;
+    text-align: center;
+}
+
+.img-facility{
+    height: 100px;
+    width: auto;
 }
 
 footer {
