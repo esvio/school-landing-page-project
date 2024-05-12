@@ -156,9 +156,15 @@ body {
     }
 }
 
+#section-latest_information {
+    display: flex;
+}
+
 .card {
     width: 25%;
     box-shadow: 3px 5px lightslategray;
+    margin: 5px;
+    border: 1px solid;
 }
 
 .card_image {
@@ -167,6 +173,10 @@ body {
     height: 200px;
 }
 
+.card_body,
+.card_footer {
+    padding: 5px;
+}
 
 .card_body .card_text-date {
     display: flex;
@@ -187,4 +197,39 @@ body {
     border-style: none;
     padding: 10px;
     font-weight: bold;
+}
+
+#section-facilities{
+    background-color: #F0F0F0;
+    margin-top: 2%;
+    height: 300px;
+}
+
+footer {
+    margin-top: 5%;
+    background-color: black;
+    color: white;
+    /* padding: 15px; */
+    display: flex;
+    /* margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom:-20px; */
+}
+
+.footer_info {
+    width: 30%;
+    /* margin-right: 3%; */
+}
+
+.footer_info ul li {
+    list-style: none;
+}
+
+.footer_info ul li .footer_icon_image {
+    width: 52px;
+    height: 52px;
+}
+
+.connect_with_us ul li {
+    display: inline;
 }
