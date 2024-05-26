@@ -156,8 +156,18 @@ body {
     }
 }
 
+#section-latest_information-wrapper {
+    display: flex;
+    align-items: center;
+}
+
 #section-latest_information {
     display: flex;
+    overflow-x: hidden; /* Change to hidden to prevent showing duplicate cards */
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+    scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 .card {
@@ -165,6 +175,26 @@ body {
     box-shadow: 3px 5px lightslategray;
     margin: 5px;
     border: 1px solid;
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.scroll-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#section-latest_information::-webkit-scrollbar {
+    display: none;
+}
+
+#section-latest_information {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .card_image {
