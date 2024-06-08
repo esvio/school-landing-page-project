@@ -21,10 +21,10 @@
         <!-- menu list -->
         <div id="menuList">
             <ul>
-                <li style="font-weight: bold;">Home</li>
-                <li>Profile</li>
-                <li>Gallery</li>
-                <li>Contact</li>
+                <a href="/"><li style="font-weight: bold;">Home</li></a>
+                <a href="./src/view/profile.html"><li>Profile</li></a>
+                <a href="./src/view/gallery.html"><li>Gallery</li></a>
+                <a href="./src/view/contact.html"><li>Contact</li></a>
             </ul>
         </div>
     </nav>
@@ -153,8 +153,6 @@
             <button id="scroll-right" class="scroll-button">▶</button>
         </div>
 
-
-
         <!-- Facilities -->
         <div id="section-facilities">
             <div class="facilities">
@@ -222,7 +220,7 @@
         </div>
 
         <div class="footer_info">
-            <h3>Conect_with_us</h3>
+            <h3>Connect With Us</h3>
             <div class="connect_with_us">
                 <ul>
                     <li>
@@ -248,58 +246,6 @@
         </div>
     </footer>
     <script src="./src/js/index.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const scrollContainer = document.getElementById('section-latest_information');
-            const scrollLeftButton = document.getElementById('scroll-left');
-            const scrollRightButton = document.getElementById('scroll-right');
-            const cards = Array.from(scrollContainer.querySelectorAll('.card'));
-            const cardWidth = cards[0].offsetWidth + 20; // Width of a card including margin
-
-            // Clone the first and last cards to create an infinite loop effect
-            const cloneFirstCards = cards.map(card => card.cloneNode(true));
-            const cloneLastCards = cards.map(card => card.cloneNode(true));
-
-            cloneFirstCards.forEach(card => scrollContainer.appendChild(card));
-            cloneLastCards.reverse().forEach(card => scrollContainer.insertBefore(card, scrollContainer.firstChild));
-
-            // Set initial scroll position to the start of the original cards
-            scrollContainer.scrollLeft = cards.length * cardWidth;
-
-            // Function to handle infinite scrolling
-            function infiniteScroll() {
-                if (scrollContainer.scrollLeft >= (scrollContainer.scrollWidth - scrollContainer.offsetWidth)) {
-                    scrollContainer.scrollLeft = cards.length * cardWidth;
-                } else if (scrollContainer.scrollLeft <= 0) {
-                    scrollContainer.scrollLeft = (scrollContainer.scrollWidth - 2 * cards.length * cardWidth);
-                }
-                scrollContainer.scrollBy({
-                    left: cardWidth,
-                    behavior: 'smooth'
-                });
-            }
-
-            // Automatically scroll at regular intervals
-            const autoScrollInterval = setInterval(infiniteScroll, 3000); // Adjust interval as needed
-
-            // Event listeners for the buttons
-            scrollRightButton.addEventListener('click', () => {
-                clearInterval(autoScrollInterval);
-                infiniteScroll();
-            });
-
-            scrollLeftButton.addEventListener('click', () => {
-                clearInterval(autoScrollInterval);
-                scrollContainer.scrollBy({
-                    left: -cardWidth,
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-
-
-    </script>
 </body>
 
 </html>
