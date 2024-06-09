@@ -5,6 +5,10 @@ nav {
     justify-content: space-between;
 }
 
+#mobile-menuList {
+    display: none;
+}
+
 #brandLogo {
     display: flex;
     align-items: center;
@@ -168,11 +172,13 @@ body {
 
 #section-latest_information {
     display: flex;
-    overflow-x: hidden; /* Change to hidden to prevent showing duplicate cards */
+    overflow-x: hidden;
+    /* Change to hidden to prevent showing duplicate cards */
     width: 100%;
     max-width: 100%;
-    padding: 0 10px;    
-    scroll-behavior: smooth; /* Smooth scrolling */
+    padding: 0 10px;
+    scroll-behavior: smooth;
+    /* Smooth scrolling */
 }
 
 .card {
@@ -234,19 +240,19 @@ body {
     font-weight: bold;
 }
 
-#section-facilities{
+#section-facilities {
     background-color: #F0F0F0;
     margin-top: 2%;
     display: flex;
     justify-content: space-around;
 }
 
-.facilities{
+.facilities {
     width: 20%;
     text-align: center;
 }
 
-.img-facility{
+.img-facility {
     height: 100px;
     width: auto;
 }
@@ -279,4 +285,45 @@ footer {
 
 .connect_with_us ul li {
     display: inline;
+}
+
+@media only screen and (max-width:720px) {
+    #menuList {
+        display: none;
+    }
+
+    #mobile-menuList {
+        display: inline;
+    }
+
+    .checkbtn {
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    #check:checked~.nav-mobile {
+        display: block;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+
+    .nav-mobile {
+        position: absolute;
+        top: 2rem;
+        right: 0;
+        background: #222831;
+        z-index: 1;
+        width: 150px;
+    }
+
+    .nav-mobile a {
+        color: #fff;
+        padding: 1rem 1.5rem;
+        display: block;
+        list-style: none;
+        text-decoration: none;
+    }
 }

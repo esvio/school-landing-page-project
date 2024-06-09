@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IQSchool</title>
     <link rel="stylesheet" href="./src/css/style.css">
-
 </head>
 
 <body>
-
     <nav>
         <!-- brand logo -->
         <div id="brandLogo">
@@ -21,11 +19,40 @@
         <!-- menu list -->
         <div id="menuList">
             <ul>
-                <a href="/"><li style="font-weight: bold;">Home</li></a>
-                <a href="./src/view/profile.html"><li>Profile</li></a>
-                <a href="./src/view/gallery.html"><li>Gallery</li></a>
-                <a href="./src/view/contact.html"><li>Contact</li></a>
+                <a href="/">
+                    <li style="font-weight: bold;">Home</li>
+                </a>
+                <a href="./src/view/profile.html">
+                    <li>Profile</li>
+                </a>
+                <a href="./src/view/gallery.html">
+                    <li>Gallery</li>
+                </a>
+                <a href="./src/view/contact.html">
+                    <li>Contact</li>
+                </a>
             </ul>
+        </div>
+
+        <div id="mobile-menuList">
+            <input type="checkbox" id="check" hidden=true>
+            <label for="check" class="checkbtn">
+                <img src="./resources/images/hamburger.png" alt="icon" width="25px" height="25px">
+            </label>
+            <div class="nav-mobile">
+                <a href="/">
+                    <li style="font-weight: bold;">Home</li>
+                </a>
+                <a href="./src/view/profile.html">
+                    <li>Profile</li>
+                </a>
+                <a href="./src/view/gallery.html">
+                    <li>Gallery</li>
+                </a>
+                <a href="./src/view/contact.html">
+                    <li>Contact</li>
+                </a>
+            </div>
         </div>
     </nav>
 
