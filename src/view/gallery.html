@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/gallery.css">
 
 </head>
 
@@ -21,13 +22,45 @@
         <!-- menu list -->
         <div id="menuList">
             <ul>
-                <a href="/"><li>Home</li></a>
-                <a href="./profile.html"><li>Profile</li></a>
-                <a href="./gallery.html" style="font-weight: bold;"><li>Gallery</li></a>
-                <a href="./contact.html"><li>Contact</li></a>
+                <a href="/">
+                    <li>Home</li>
+                </a>
+                <a href="./profile.html">
+                    <li>Profile</li>
+                </a>
+                <a href="./gallery.html" style="font-weight: bold;">
+                    <li>Gallery</li>
+                </a>
+                <a href="./contact.html">
+                    <li>Contact</li>
+                </a>
             </ul>
         </div>
     </nav>
+
+    <header>
+        <h2>My Gallery</h2>
+        <div id="gallery_filter">
+            <button class="button_filter active" onclick="filterSelection('all')">All</button>
+            <button class="button_filter" onclick="filterSelection('contentA')">Class</button>
+            <button class="button_filter" onclick="filterSelection('contentB')">Program</button>
+        </div>
+    </header>
+
+    <section>
+        <table>
+            <tr>
+                <td class="gallery_content contentA"><img src="../../resources/images/g1.jpg" alt="image1" class="class"><br>Gambar 1
+                </td>
+                <td class="gallery_content contentB"><img src="../../resources/images/g2.jpg" alt="image2" class="class"><br>Gambar 2
+                </td>
+                <td class="gallery_content contentA"><img src="../../resources/images/g3.jpg" alt="image3" class="class"><br>Gambar 3
+                </td>
+                <td class="gallery_content contentB"><img src="../../resources/images/g4.jpg" alt="image4" class="class"><br>Gambar 4
+                </td>
+            </tr>
+        </table>
+    </section>
 
     <footer>
         <div class="footer_info">
@@ -76,7 +109,7 @@
             </div>
         </div>
     </footer>
-    <script src="../js/index.js"></script>
+    <script src="../js/gallery.js"></script>
 </body>
 
 </html>
